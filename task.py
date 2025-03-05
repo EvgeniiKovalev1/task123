@@ -4,10 +4,9 @@ import socket
 
 # from http.server import BaseHTTPRequestHandler, HTTPServer
 
-from task123.constants import HOST, PORT
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind((HOST, PORT))
+server_socket.bind(('localhost', 8000))
 server_socket.listen(123)
 
 while True:

@@ -21,4 +21,4 @@ while True:
         response_method = ""
     else:
         response_method = "Error"
-    response = f"200, {response_method}"
+    response = response_method

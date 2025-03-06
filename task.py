@@ -17,8 +17,11 @@ while True:
     method, path, _ = request_line.split()
     if method == "GET":
         response_method = "GET"
+        response = f"HTTP/1.1 200 OK\r\nContent-Length: {len(response_method)}\r\nContent-Type: text/plain\r\n\r\n{response_method}/r/nConnection: close"
     elif method == "POST":
-        response_method = ""
+        response_method = "POST"
+        response = f"HTTP/1.1 200 OK\r\nContent-Length: {len(response_method)}\r\nContent-Type: text/plain\r\n\r\n{response_method}/r/nConnection: close"
     else:
         response_method = "Error"
-    response = response_method
+        response = f"HTTP/1.1 404 \r\nContent-Length: {len(response_method)}\r\nContent-Type: text/plain\r\n\r\n{response_method}/r/nConnection: close"
+    

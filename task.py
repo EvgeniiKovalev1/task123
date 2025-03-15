@@ -82,7 +82,7 @@ def NOT_FOUND_response(path):
 
 
 def handle_client(client_socket, client_address):
-    """Функция разбирающая запросы"""
+    """Функция разберающая запросы"""
 
 
     request = client_socket.recv(1024).decode()
